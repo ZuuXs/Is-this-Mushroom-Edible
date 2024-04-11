@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de Prédiction</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function setColor() {
+            var colorPicker = document.getElementById('colorPicker');
+            var color = colorPicker.value;
+            document.getElementById('R').value = parseInt(color.substr(1, 2), 16);
+            document.getElementById('G').value = parseInt(color.substr(3, 2), 16);
+            document.getElementById('B').value = parseInt(color.substr(5, 2), 16);
+        }
+    </script>
+</head>
+<body>
+
+<form action="/rep" method="POST">
+    <h2 style="text-align: center">Formulaire de Prédiction</h2>
+    
+    <label for="colorPicker">Choisir une couleur:</label><br>
+    <input type="color" id="colorPicker" name="color" onchange="setColor()"><br>
+    
+    <label for="R" style="color:red">Rouge (R):</label><br>
+    <input type="number" id="R" name="R" min="0" max="255"><br>
+    
+    <label for="G" style="color:green">Vert (G):</label><br>
+    <input type="number" id="G" name="G" min="0" max="255"><br>
+    
+    <label for="B" style="color:blue">Bleu (B):</label><br>
+    <input type="number" id="B" name="B" min="0" max="255"><br>
+    
+    <p><strong>Forme:</strong></p>
+    <div class="shapes-container">
+    <input type="checkbox" id="Bellshaped" name="shape" value="Bellshaped">
+    <label for="Bell-Shaped">Bell-Shaped</label><br>
+    
+    <input type="checkbox" id="Bolete" name="shape" value="Bolete">
+    <label for="Bolete">Bolete</label><br>
+    
+    <input type="checkbox" id="Cauliflower" name="shape" value="Cauliflower">
+    <label for="Cauliflower">Cauliflower</label><br>
+    
+    <input type="checkbox" id="Chanterelles" name="shape" value="Chanterelles">
+    <label for="Chanterelles">Chanterelles</label><br>
+    
+    <input type="checkbox" id="Conical" name="shape" value="Conical">
+    <label for="Conical">Conical</label><br>
+    
+    <input type="checkbox" id="Convex" name="shape" value="Convex">
+    <label for="Convex">Convex</label><br>
+    
+    <input type="checkbox" id="CoralFungi" name="shape" value="CoralFungi">
+    <label for="Coral_Fungi">Coral Fungi</label><br>
+    
+    <input type="checkbox" id="Corticioid" name="shape" value="Corticioid">
+    <label for="Corticioid">Corticioid</label><br>
+    
+    <input type="checkbox" id="CupFungi" name="shape" value="CupFungi">
+    <label for="Cup_Fungi">Cup Fungi</label><br>
+    
+    <input type="checkbox" id="Cylindrical" name="shape" value="Cylindrical">
+    <label for="Cylindrical">Cylindrical</label><br>
+    
+    <input type="checkbox" id="Depressed" name="shape" value="Depressed">
+    <label for="Depressed">Depressed</label><br>
+    
+    <input type="checkbox" id="Earthstars" name="shape" value="Earthstars">
+    <label for="Earthstars">Earthstars</label><br>
+    
+    <input type="checkbox" id="FalseMorels" name="shape" value="FalseMorels">
+    <label for="False_Morels">False Morels</label><br>
+    
+    <input type="checkbox" id="Flat" name="shape" value="Flat">
+    <label for="Flat">Flat</label><br>
+    
+    <input type="checkbox" id="Funnelshaped" name="shape" value="Funnelshaped">
+    <label for="Funnel-shaped">Funnel-shaped</label><br>
+    
+    <input type="checkbox" id="JellyFungi" name="shape" value="JellyFungi">
+    <label for="Jelly_Fungi">Jelly Fungi</label><br>
+    
+    <input type="checkbox" id="Knobbed" name="shape" value="Knobbed">
+    <label for="Knobbed">Knobbed</label><br>
+    
+    <input type="checkbox" id="Polypore" name="shape" value="Polypore">
+    <label for="Polypore">Polypore</label><br>
+    
+    <input type="checkbox" id="Puffballs" name="shape" value="Puffballs">
+    <label for="Puffballs">Puffballs</label><br>
+    
+    <input type="checkbox" id="Shellshaped" name="shape" value="Shellshaped">
+    <label for="Shell-shaped">Shell-shaped</label><br>
+    
+    <input type="checkbox" id="Stinkhorns" name="shape" value="Stinkhorns">
+    <label for="Stinkhorns">Stinkhorns</label><br>
+    
+    <input type="checkbox" id="ToothFungi" name="shape" value="ToothFungi">
+    <label for="Tooth_Fungi">Tooth Fungi</label><br>
+    
+    <input type="checkbox" id="TrueMorels" name="shape" value="TrueMorels">
+    <label for="True_Morels">True Morels</label><br>
+    
+    <input type="checkbox" id="Truffles" name="shape" value="Truffles">
+    <label for="Truffles">Truffles</label><br>
+</div>
+  
+<div class="surface-container">
+    <p><strong>Surface:</strong></p>
+    <input type="checkbox" id="Smooth" name="surface" value="Smooth">
+    <label for="smooth"> Smooth</label><br>
+    <input type="checkbox" id="Fibrous" name="surface" value="Fibrous">
+    <label for="fibrous"> Fibrous</label><br>
+    <input type="checkbox" id="FlatScales" name="surface" value="FlatScales">
+    <label for="scaly"> FlatScales</label><br>
+    <input type="checkbox" id="Patches" name="surface" value="Patches">
+    <label for="mucus"> Patches</label><br>
+    <input type="checkbox" id="Silky" name="surface" value="Silky">
+    <label for="dry"> Silky</label><br>
+    <input type="checkbox" id="RaisedScales" name="surface" value="RaisedScales">
+    <label for="sticky"> RaisedScales</label><br>
+    <input type="checkbox" id="Hairy" name="surface" value="Hairy">
+    <label for="wrinkled"> Hairy</label><br>
+    <input type="checkbox" id="Powder" name="surface" value="Powder">
+    <label for="silky"> Powder</label><br>
+    <input type="checkbox" id="Velvety" name="surface" value="Velvety">
+    <label for="silky"> Velvety</label><br>
+</div>
+    <label for="modele">Modèle:</label><br>
+    <select id="modele" name="modele">
+        <option value="svm">SVM</option>
+        <option value="arbre_decision">Arbre de décision</option>
+    </select><br>
+    
+    <input type="submit" value="Soumettre">
+</form>
+
+</body>
+</html>
